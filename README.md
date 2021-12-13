@@ -8,7 +8,7 @@ Star Wars Resistance Social Network
 
 ## Como executar:
 >:warning: É necessário ter o `docker` e `docker-compose` devidamente instalados e configurados.
-> Certifique-se também de ter a `8080` livre ou altere a porta em que a API estará disponível.
+> Certifique-se também de ter a porta `8080` livre ou altere a porta em que a API estará disponível.
 ```shell
 docker-compose up -d
 ```
