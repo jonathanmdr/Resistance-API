@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+    resistance-api:
+        image: jonathanmdr/resistance-api:1.0.0
+        container_name: resistance-api
+        networks:
+            - resistance
+        ports:
+            - "8080:8092"
+        restart: unless-stopped
+        depends_on:
+            - mongodb
+    mongodb:
+        image: mongo:latest
+        container_name: resistance-db
+        networks:
+            - resistance
+        volumes:
+            - resistance
+        restart: unless-stopped
+
+networks:
+    resistance:
+        driver: bridge
+
+volumes:
+    resistence:
+        driver: local

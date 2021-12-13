@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+    mongodb:
+        image: mongo:latest
+        container_name: resistance-db
+        networks:
+            - resistance
+        ports:
+            - "27017:27017"
+        volumes:
+            - resistance
+        restart: unless-stopped
+
+networks:
+    resistance:
+        driver: bridge
+
+volumes:
+    resistence:
+        driver: local
