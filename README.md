@@ -13,7 +13,7 @@ Star Wars Resistance Social Network
 docker-compose up -d
 ```
 
-## Como para a execução:
+## Como parar a execução:
 ```shell
 docker-compose down --remove-orphans --volume
 ```
