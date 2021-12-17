@@ -43,7 +43,7 @@ public interface RebelOpenApi {
 
     @Operation(summary = "Does save a new rebel")
     @ApiResponses( value = {
-        @ApiResponse(responseCode = "200", description = "Found one with success", content = @Content(
+        @ApiResponse(responseCode = "201", description = "Rebel created with success", content = @Content(
             schema = @Schema(implementation = RebelOutputDto.class)
         )),
         @ApiResponse(responseCode = "400", description = "Payload is invalid", content = @Content(
