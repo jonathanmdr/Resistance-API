@@ -16,7 +16,7 @@ public class RebelMapper {
     private final ModelMapper modelMapper;
 
     public RebelMapper(final ModelMapper modelMapper) {
-        this. modelMapper = modelMapper;
+        this.modelMapper = modelMapper;
     }
 
     public Rebel toModel(final RebelInputDto rebelInputDto) {
