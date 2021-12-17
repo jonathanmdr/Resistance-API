@@ -24,7 +24,8 @@ jobs:
     - name: Build docker image & Publish in docker hub
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: ${{ secrets.DOCKER_USERNAME }}/resistance-api:1.0.0
+        image: ${{ secrets.DOCKER_USERNAME }}/resistance-api
+        tags: latest, 1.0.0
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
