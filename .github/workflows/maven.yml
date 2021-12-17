@@ -22,7 +22,7 @@ jobs:
 
     - name: Build & Test
       run: mvn -B package --file pom.xml
-    
+
     - name: Provide application actual version
       id: vars
       run: echo ::set-output name=api_version::$(cat pom.xml | grep "<version>.*</version>" | head -2 |awk -F'[><]' '{print $3}' | sed -n '2p')
