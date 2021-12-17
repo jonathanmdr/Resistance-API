@@ -19,5 +19,12 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: maven
-    - name: Build
+    - name: Build & Test
       run: mvn -B package --file pom.xml
+    - name: Build docker image & Publish in docker hub
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: ${{ secrets.DOCKER_USERNAME }}/resistance-api:1.0.0
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
